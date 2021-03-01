@@ -1,0 +1,76 @@
+<div class="card">
+    <div class="card-body">
+        <div class="row mb-2">
+            <div class="col-3">
+                <div class="btn-group" role="group">
+                    <button type="button" (click)="filterBy('')" class="btn btn-outline-primary">Full List</button>
+                    <button type="button" (click)="filterBy('ONLINE')" class="btn btn-outline-primary">Online</button>
+                </div>
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filterTerm">
+            </div>
+
+
+            <div class="col-2">
+                <div class="spinner-border" role="status" *ngIf="loading">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="horizontal-scroll-table rounded-bottom shadow-sm">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center align-left text-nowrap">Favorite</th>
+                        <th class="text-left align-middle text-nowrap">Name</th>
+                        <th class="text-left align-middle text-nowrap">Location</th>
+                        <th class="text-left align-middle text-nowrap">Avaliability</th>
+                        <th class="text-left align-middle text-nowrap">Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let station of stations | filter:filterTerm ; index as i ">
+                        <td class="text-center align-middle text-nowrap">
+                            <div class="d-grid gap-2 col-12 mx-auto">
+
+
+
+                                <button class="btn btn-secondary btn-sm" [disabled]="loading"
+                                    *ngIf="isFavorite(station)" (click)="updateStation(station)">Remove <i
+                                        class="fa fa-heart" style="font-size:20px;color:red"></i></button>
+                                <button class="btn btn-primary btn-sm" [disabled]="loading" *ngIf="!isFavorite(station)"
+                                    (click)="updateStation(station)">Add <i class="fa fa-heart"
+                                        style="font-size:20px;color:rgba(0, 0, 0, 0.822)"></i></button>
+
+
+                            </div>
+                        </td>
+                        <td class="text-left align-middle text-nowrap">
+                            {{station.name}}
+                        </td>
+                        <td class="text-left align-middle text-nowrap">
+                            {{station.location}}
+                        </td>
+                        <td class="text-left align-middle text-nowrap">
+                            {{station.avaliability}}
+                        </td>
+                        <td class="text-left align-middle text-nowrap">
+                            {{station.details}}
+                        </td>
+                </tbody>
+            </table>
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+    </div>
+</div>

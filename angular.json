@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -124,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "charge-lab"
+  "defaultProject": "charge-lab",
+  "cli": {
+    "analytics": "7ed92ac9-134d-4fd1-8000-88e2e29a24ef"
+  }
 }

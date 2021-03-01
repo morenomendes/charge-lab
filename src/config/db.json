@@ -1,0 +1,83 @@
+{
+    "users": [
+            {
+                "id": 2,
+                "firstName": "Alan",
+                "lastName": "M",
+                "phoneNumber": "002-321-5555",
+                "email": "alan@test.com",
+                "stations": [1,3,4]
+            }
+        ],
+
+
+        "stations": [
+            {
+                "id": 1,
+                "name": "Station 1",
+                "location": "location 1 ",
+                "avaliability": "IN-USE",
+                "details": "details 1 "
+            },
+            {
+                "id": 2,
+                "name": "Station 2",
+                "location": "location 2",
+                "avaliability": "OFFLINE",
+                "details": "details 2"
+            },
+            {
+                "id": 3,
+                "name": "Station 3",
+                "location": "location 3",
+                "avaliability": "ONLINE",
+                "details": "details "
+            },
+            {
+                "id": 4,
+                "name": "Station 4",
+                "location": "location 4",
+                "avaliability": "ONLINE",
+                "details": "details 5"
+            }
+        ],
+
+        "sessions": [
+            {
+                "id": 1,
+                "name": "session 1",
+                "location": "location 1 ",
+                "chargingTime": 1,
+                "powerConsumption": 1,
+                "cost": 1
+            },
+            {
+                "id": 2,
+                "name": "session ",
+                "location": "location 2",
+                "chargingTime": 2,
+                "powerConsumption": 2,
+                "cost": 2
+            },
+            {
+                "id": 3,
+                "name": "session 3",
+                "location": "location 3",
+                "chargingTime": 3,
+                "powerConsumption": 3,
+                "cost": 3
+            },
+            {
+                "id": 4,
+                "name": "session 4",
+                "location": "location  4",
+                "chargingTime": 4,
+                "powerConsumption": 4,
+                "cost": 4
+            }
+        ]
+
+        
+
+
+}

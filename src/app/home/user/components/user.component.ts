@@ -14,7 +14,7 @@ import { finalize } from 'rxjs/operators';
 export class UserComponent implements OnInit {
 
   @Input()  user!: User
-
+ 
   public userForm!: FormGroup
   public loading: boolean = false
 
